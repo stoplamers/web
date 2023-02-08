@@ -65,10 +65,48 @@ table {
 }
 
 table, th, td {
-    border: 1px solid black;
-  }
+    border: 3px solid black;
+    border-collapse: collapse;
+}
 
-@media screen and (max-width:560px) {
+th, td {
+    padding: 2px 5px;
+}
+
+.gallery-post {
+    display: flex;
+    overflow: auto;
+}
+
+/* width */
+.gallery-post::-webkit-scrollbar {
+    width: 10px;
+}
+.gallery-post::-webkit-scrollbar-track {
+    background: black;
+}
+.gallery-post::-webkit-scrollbar-thumb {
+    background: #6bb6de;
+}
+.gallery-post::-webkit-scrollbar-thumb:hover {
+    background: #2989bc
+    ;
+}
+
+.gallery-post::-webkit-scrollbar-button {
+    width: 0;
+}
+
+.gallery-post > a > img {
+    height: 200px;
+    padding-right: 10px;
+}
+
+.gallery-post:last-child > img{
+    padding-right: 0px;
+}
+
+@media screen and (max-width:600px) {
     body, html {
         margin: 0;
         background-color: white;
@@ -82,6 +120,6 @@ table, th, td {
 @media screen and (min-width:1080px) {
     #all, #footer {
         margin: auto;
-        max-width: 820px;
+        max-width: 600px;
     }
 }
